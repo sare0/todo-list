@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TO-DO LİST</title>
+​
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="/js/bootstrap.js" charset="utf-8"></script>
+​
+  </head>
+  <body>
+<form class="my-3" action="/ekle" method="post">
+  <div id="myDIV" class="header">
+​
+    <h2 style="margin:5px">My To Do List</h2>
+​
+    <input required name="yapilacaklar" type="text" id="myInput"  placeholder="Title...">
+    <button ​onclick="newElement()" type="submit" name="button">Add</button>
+  </div>
+  </form>
+<%    for (var i =0 ; i<listem.length ; i++){   %>
+  <ul id="myUL">
+<li><%= listem[i].yapilacaklar %></li>
+​
+  </ul>
+<%    } %>
+
+​
+​
+​
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- script js -->
+    <script src="js/app.js"></script>
+​
+
+​
+​
+​
+  </body>
+</html>
